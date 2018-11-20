@@ -29,13 +29,6 @@
     </url>
 
     <url>
-        <loc>https://zmyliufeng.github.io/categories/%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3/</loc>
-        <lastmod>2018-10-16T07:31:12.184Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://zmyliufeng.github.io/categories/Maven/</loc>
         <lastmod>2018-10-16T07:31:12.184Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -52,6 +45,13 @@
     <url>
         <loc>https://zmyliufeng.github.io/categories/Docker/</loc>
         <lastmod>2018-10-17T02:29:45.027Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://zmyliufeng.github.io/categories/%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3/</loc>
+        <lastmod>2018-11-20T06:39:01.639Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

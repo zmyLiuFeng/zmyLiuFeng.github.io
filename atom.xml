@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zmyliufeng.github.io/"/>
-  <updated>2018-10-17T02:29:45.027Z</updated>
+  <updated>2018-11-20T06:39:01.639Z</updated>
   <id>https://zmyliufeng.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>并行与并发</title>
+    <link href="https://zmyliufeng.github.io/2018/11/20/%E5%B9%B6%E8%A1%8C%E4%B8%8E%E5%B9%B6%E5%8F%91/"/>
+    <id>https://zmyliufeng.github.io/2018/11/20/并行与并发/</id>
+    <published>2018-11-20T03:55:23.000Z</published>
+    <updated>2018-11-20T06:39:01.639Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="并行与并发"><a href="#并行与并发" class="headerlink" title="并行与并发"></a>并行与并发</h1><p>并发和并行最开始都是操作系统中的概念，表示的是CPU执行多个任务的方式。这两个概念极容易混淆。</p><h2 id="并行"><a href="#并行" class="headerlink" title="并行"></a>并行</h2><p>1.什么是并行？<br>并行（Parallel），当系统有一个以上CPU时，当一个CPU执行一个进程时，另一个CPU可以执行另一个进程，两个进程互不抢占CPU资源，可以同时进行，这种方式我们称之为并行(Parallel)。  (只有在系统有多个 CPU 的时候才会出现真正意义上的并行)<br>多个人同事做多件事</p><h2 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h2><p>1.什么是并发？<br>并发实际就是 cpu 时间片的切换，在单核 CPU 中，CPU同一时间内只能做一件事情，Windown 系统为了让其看起来是“同时做多件事请”，把 CPU 的时间划划分长短基本相同的时间区间，既“时间片”，通过操作系统的管理，把这些时间片进行轮流的分配给各个应用使用，这样，给用户的感觉就是他在同时进行听歌和打游戏，实际上，在操作系统中，CPU 是在听歌进程和游戏进程中来回快速的切换。这个是我们所理解的并发，那么并发的定义到底是什么呢？<br>并发（Concurrent），在操作系统中，是指一个时间段中有几个程序都处于已启动运行到运行完毕之间，且这几个程序都是在同一个处理机上运行。<br>一个人同事做多件事</p><h2 id="并行和并发的区别"><a href="#并行和并发的区别" class="headerlink" title="并行和并发的区别"></a>并行和并发的区别</h2><p>并发，指的是多个事情，在同一时间段内同时发生了。<br>并行，指的是多个事情，在同一时间点上同时发生了。</p><p>并发的多个任务之间是互相抢占资源的。<br>并行的多个任务之间是不互相抢占资源的、</p><p>只有在多CPU的情况中，才会发生并行。否则，看似同时发生的事情，其实都是并发执行的。</p><p><img src="15426848725853/15426858536477.jpg" alt=""><br>就像上面这张图，只有一个咖啡机的时候，一台咖啡机其实是在并发被使用的。而有多个咖啡机的时候，多个咖啡机之间才是并行被使用的。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;并行与并发&quot;&gt;&lt;a href=&quot;#并行与并发&quot; class=&quot;headerlink&quot; title=&quot;并行与并发&quot;&gt;&lt;/a&gt;并行与并发&lt;/h1&gt;&lt;p&gt;并发和并行最开始都是操作系统中的概念，表示的是CPU执行多个任务的方式。这两个概念极容易混淆。&lt;/p&gt;
+&lt;h2 id
+      
+    
+    </summary>
+    
+      <category term="阅读理解" scheme="https://zmyliufeng.github.io/categories/%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3/"/>
+    
+    
+      <category term="线程" scheme="https://zmyliufeng.github.io/tags/%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac下Docker的安装使用</title>
