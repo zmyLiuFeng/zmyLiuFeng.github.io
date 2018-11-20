@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zmyliufeng.github.io/"/>
-  <updated>2018-11-20T06:39:01.639Z</updated>
+  <updated>2018-11-20T07:16:50.848Z</updated>
   <id>https://zmyliufeng.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux Java,Tomcat-Server中Time和服务器中不一致</title>
+    <link href="https://zmyliufeng.github.io/2018/11/20/Linux%20Java,Tomcat-Server%E4%B8%ADTime%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%AD%E4%B8%8D%E4%B8%80%E8%87%B4/"/>
+    <id>https://zmyliufeng.github.io/2018/11/20/Linux Java,Tomcat-Server中Time和服务器中不一致/</id>
+    <published>2018-11-20T07:04:52.000Z</published>
+    <updated>2018-11-20T07:16:50.848Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天在测试任务调度过程中，发现已经到时间了，结果任务调度还是不执行，因为在代码中取得时间是 new Date(),于是排查服务器的时间 Fri Nov 25 11:29:31 CST 2018 是正确的，又排查 java 的时间 Fri Nov 25 11:29:31 CST 2018 也是正确，在 tomcat 容器中运行一个 jsp 打印了一下时间 Fri Nov 25 04:43:51 GMT 2018 发现少了8小时</p><p>明显jsp中打印的时间时区为GMT</p><p>CET,UTC,GMT,CST几种常见时间概述与关系</p><p>已经过以上测试，可能是Tomcat问题，那么修改tomcat 启动参数<br>http: //free.yes81.net/yes81/view-13576.html</p><p>按照以上方式修改后，tomcat内Date时间正常</p><p>过程中还发现一个问题我的系统中</p><p>/etc/sysconfig/clock 文件只有一行（文件说明）</p><p>ZONE=”Asia/Shanghai”<br>并没有这两行。</p><p>UTC=false<br>ARC=false<br>加上后，tomcat不修改时间也是正常。</p><p>后经过搜索返现一篇博文<br>http: //blog.tangjianwei.com/2009/06/04/the-problem-of-tomcat-timezone/<br>启动提到：<br>tomcat读取的可能是硬件时间（BIOS时间）<br>而<br>UTC=false<br>UTC – 指定BIOS中保存的时间是否是GMT/UTC时间，true表示BIOS里面保存的时间是UTC时间，false表示BIOS里面保存的时间是本地时间。</p><p>所以判断 可能为之前没有设置 /etc/sysconfig/clock 中 UTC=false，倒置tomcat读取时区出现问题倒置。</p><p>到此问题基本解决。</p><p>其他相关博文<br>http: //escode.blog.51cto.com/2025829/1147439</p><p>转载 原文地址 https: //<a href="http://www.cnblogs.com/weihuang6620/p/9268880.html" target="_blank" rel="noopener">www.cnblogs.com/weihuang6620/p/9268880.html</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;今天在测试任务调度过程中，发现已经到时间了，结果任务调度还是不执行，因为在代码中取得时间是 new Date(),于是排查服务器的时间 Fri Nov 25 11:29:31 CST 2018 是正确的，又排查 java 的时间 Fri Nov 25 11:29:31 CS
+      
+    
+    </summary>
+    
+      <category term="疑难杂症" scheme="https://zmyliufeng.github.io/categories/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+    
+    
+      <category term="运维" scheme="https://zmyliufeng.github.io/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+  </entry>
   
   <entry>
     <title>并行与并发</title>

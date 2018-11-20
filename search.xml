@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Linux Java,Tomcat-Server中Time和服务器中不一致]]></title>
+    <url>%2F2018%2F11%2F20%2FLinux%20Java%2CTomcat-Server%E4%B8%ADTime%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%AD%E4%B8%8D%E4%B8%80%E8%87%B4%2F</url>
+    <content type="text"><![CDATA[今天在测试任务调度过程中，发现已经到时间了，结果任务调度还是不执行，因为在代码中取得时间是 new Date(),于是排查服务器的时间 Fri Nov 25 11:29:31 CST 2018 是正确的，又排查 java 的时间 Fri Nov 25 11:29:31 CST 2018 也是正确，在 tomcat 容器中运行一个 jsp 打印了一下时间 Fri Nov 25 04:43:51 GMT 2018 发现少了8小时 明显jsp中打印的时间时区为GMT CET,UTC,GMT,CST几种常见时间概述与关系 已经过以上测试，可能是Tomcat问题，那么修改tomcat 启动参数http: //free.yes81.net/yes81/view-13576.html 按照以上方式修改后，tomcat内Date时间正常 过程中还发现一个问题我的系统中 /etc/sysconfig/clock 文件只有一行（文件说明） ZONE=”Asia/Shanghai”并没有这两行。 UTC=falseARC=false加上后，tomcat不修改时间也是正常。 后经过搜索返现一篇博文http: //blog.tangjianwei.com/2009/06/04/the-problem-of-tomcat-timezone/启动提到：tomcat读取的可能是硬件时间（BIOS时间）而UTC=falseUTC – 指定BIOS中保存的时间是否是GMT/UTC时间，true表示BIOS里面保存的时间是UTC时间，false表示BIOS里面保存的时间是本地时间。 所以判断 可能为之前没有设置 /etc/sysconfig/clock 中 UTC=false，倒置tomcat读取时区出现问题倒置。 到此问题基本解决。 其他相关博文http: //escode.blog.51cto.com/2025829/1147439 转载 原文地址 https: //www.cnblogs.com/weihuang6620/p/9268880.html]]></content>
+      <categories>
+        <category>疑难杂症</category>
+      </categories>
+      <tags>
+        <tag>运维</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[并行与并发]]></title>
     <url>%2F2018%2F11%2F20%2F%E5%B9%B6%E8%A1%8C%E4%B8%8E%E5%B9%B6%E5%8F%91%2F</url>
     <content type="text"><![CDATA[并行与并发并发和并行最开始都是操作系统中的概念，表示的是CPU执行多个任务的方式。这两个概念极容易混淆。 并行1.什么是并行？并行（Parallel），当系统有一个以上CPU时，当一个CPU执行一个进程时，另一个CPU可以执行另一个进程，两个进程互不抢占CPU资源，可以同时进行，这种方式我们称之为并行(Parallel)。 (只有在系统有多个 CPU 的时候才会出现真正意义上的并行)多个人同事做多件事 并发1.什么是并发？并发实际就是 cpu 时间片的切换，在单核 CPU 中，CPU同一时间内只能做一件事情，Windown 系统为了让其看起来是“同时做多件事请”，把 CPU 的时间划划分长短基本相同的时间区间，既“时间片”，通过操作系统的管理，把这些时间片进行轮流的分配给各个应用使用，这样，给用户的感觉就是他在同时进行听歌和打游戏，实际上，在操作系统中，CPU 是在听歌进程和游戏进程中来回快速的切换。这个是我们所理解的并发，那么并发的定义到底是什么呢？并发（Concurrent），在操作系统中，是指一个时间段中有几个程序都处于已启动运行到运行完毕之间，且这几个程序都是在同一个处理机上运行。一个人同事做多件事 并行和并发的区别并发，指的是多个事情，在同一时间段内同时发生了。并行，指的是多个事情，在同一时间点上同时发生了。 并发的多个任务之间是互相抢占资源的。并行的多个任务之间是不互相抢占资源的、 只有在多CPU的情况中，才会发生并行。否则，看似同时发生的事情，其实都是并发执行的。 就像上面这张图，只有一个咖啡机的时候，一台咖啡机其实是在并发被使用的。而有多个咖啡机的时候，多个咖啡机之间才是并行被使用的。]]></content>
