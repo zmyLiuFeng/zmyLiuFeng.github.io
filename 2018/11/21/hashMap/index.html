@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="面试,">
 
 
 
@@ -81,17 +81,20 @@
 
 
 
-<meta name="description" content="天道不一定酬所有的勤，但是天道只酬勤！">
-<meta name="keywords" content="博客,MYZ">
-<meta property="og:type" content="website">
-<meta property="og:title" content="MYZ BLOG">
-<meta property="og:url" content="https://zmyliufeng.github.io/tags/面试/index.html">
+<meta name="description" content="什么是 HashMap？HashMap 是一个用于存储键值对（key-value）的集合，他是基于哈希表实现的，他内部的通过单项链表来解决冲突问题，hashMap 是线程不安全的，concurrent 并发包下的 concurrentHashMap 是线程安全的hashMap实现了 Serializable接口，因此他可以被序列化，实现了 Cloneable 接口因此可以被克隆 HashMap存数">
+<meta name="keywords" content="面试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hashMap">
+<meta property="og:url" content="https://zmyliufeng.github.io/2018/11/21/hashMap/index.html">
 <meta property="og:site_name" content="MYZ BLOG">
-<meta property="og:description" content="天道不一定酬所有的勤，但是天道只酬勤！">
+<meta property="og:description" content="什么是 HashMap？HashMap 是一个用于存储键值对（key-value）的集合，他是基于哈希表实现的，他内部的通过单项链表来解决冲突问题，hashMap 是线程不安全的，concurrent 并发包下的 concurrentHashMap 是线程安全的hashMap实现了 Serializable接口，因此他可以被序列化，实现了 Cloneable 接口因此可以被克隆 HashMap存数">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://zmyliufeng.github.io/2018/11/21/hashMap/15427708181192.jpg">
+<meta property="og:updated_time" content="2018-11-21T09:04:08.665Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MYZ BLOG">
-<meta name="twitter:description" content="天道不一定酬所有的勤，但是天道只酬勤！">
+<meta name="twitter:title" content="hashMap">
+<meta name="twitter:description" content="什么是 HashMap？HashMap 是一个用于存储键值对（key-value）的集合，他是基于哈希表实现的，他内部的通过单项链表来解决冲突问题，hashMap 是线程不安全的，concurrent 并发包下的 concurrentHashMap 是线程安全的hashMap实现了 Serializable接口，因此他可以被序列化，实现了 Cloneable 接口因此可以被克隆 HashMap存数">
+<meta name="twitter:image" content="https://zmyliufeng.github.io/2018/11/21/hashMap/15427708181192.jpg">
 
 
 
@@ -121,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://zmyliufeng.github.io/tags/面试/">
+  <link rel="canonical" href="https://zmyliufeng.github.io/2018/11/21/hashMap/">
 
 
 
 
 
-  <title>标签: 面试 | MYZ BLOG</title>
+  <title>hashMap | MYZ BLOG</title>
   
 
 
@@ -156,7 +159,7 @@
     
   
 
-  <div class="container sidebar-position-left">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -298,104 +301,281 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block tag">
-
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>面试<small>标签</small>
-        </h1>
-      </div>
-
-      
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zmyliufeng.github.io/2018/11/21/hashMap/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="MYZ">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MYZ BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/11/21/浅谈集合/" itemprop="url">
-              
-                <span itemprop="name">浅谈集合</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">hashMap</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-21T17:03:35+08:00" content="2018-11-21">
-          11-21
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-21T11:11:43+08:00">
+                2018-11-21
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/面试纪要/" itemprop="url" rel="index">
+                    <span itemprop="name">面试纪要</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/21/hashMap/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/11/21/hashMap/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/11/21/hashMap/" class="leancloud_visitors" data-flag-title="hashMap">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.2k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/21/hashMap/" itemprop="url">
-              
-                <span itemprop="name">hashMap</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-21T11:11:43+08:00" content="2018-11-21">
-          11-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/21/heshCode-和equals/" itemprop="url">
-              
-                <span itemprop="name">hashCode() 和equals()</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-21T10:08:48+08:00" content="2018-11-21">
-          11-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+        <h3 id="什么是-HashMap？"><a href="#什么是-HashMap？" class="headerlink" title="什么是 HashMap？"></a>什么是 HashMap？</h3><p>HashMap 是一个用于存储键值对（key-value）的集合，他是基于哈希表实现的，他内部的通过单项链表来解决冲突问题，<br>hashMap 是线程不安全的，concurrent 并发包下的 concurrentHashMap 是线程安全的<br>hashMap实现了 Serializable接口，因此他可以被序列化，实现了 Cloneable 接口因此可以被克隆</p>
+<h4 id="HashMap存数据的过程"><a href="#HashMap存数据的过程" class="headerlink" title="HashMap存数据的过程"></a>HashMap存数据的过程</h4><p>HashMap 内部维护了一个存储数据的 Entry数组，他通过链表来解决冲突，每一个 Entry 本质上都是一个单向链表，当准备添加一个（key-value）时，先通过 Hash(key)计算 hash 值，然后通过 indexFor(hash,length) 求取存储位置，计算方法是先用hash&amp;0x7FFFFFFF后，再对length取模，这就保证每一个key-value对都能存入HashMap中，当计算出来的位置相同时，由于存入的位置是一个链表，则把这个 key-value 存入链表头。<br>hashMap 的 key-value 都可以为null，但是 key 为 null的键值对，永远存放在 table[0]为头结点的链表中。<br>了解了数据的存储，那么数据的读取也就很容易就明白了。</p>
+<pre><code>HashMap的存储结构，如下图所示：
+</code></pre><p><img src="15427708181192.jpg" alt=""></p>
+<p>图中，紫色部分即代表哈希表，也称为哈希数组，数组的每个元素都是一个单链表的头节点，链表是用来解决冲突的，如果不同的key映射到了数组的同一位置处，就将其放入单链表中。</p>
+<h4 id="hashMap-的扩容"><a href="#hashMap-的扩容" class="headerlink" title="hashMap 的扩容"></a>hashMap 的扩容</h4><p>HashMap内存储数据的Entry数组默认是16，如果没有对Entry扩容机制的话，当存储的数据一多，Entry内部的链表会很长，这就失去了HashMap的存储意义了。所以HasnMap内部有自己的扩容机制。HashMap内部有：变量size，它记录HashMap的底层数组中已用槽的数量；<br>变量threshold，它是HashMap的阈值，用于判断是否需要调整HashMap的容量（threshold = 容量*加载因子）<br>变量DEFAULT_LOAD_FACTOR = 0.75f，默认加载因子为0.75</p>
+<p>HashMap扩容的条件是：当size大于threshold时，对HashMap进行扩容<br>扩容是是新建了一个HashMap的底层数组，而后调用transfer方法，将就HashMap的全部元素添加到新的HashMap中（要重新计算元素在新的数组中的索引位置）。 很明显，扩容是一个相当耗时的操作，因为它需要重新计算这些元素在新的数组中的位置并进行复制处理。因此，我们在用HashMap的时，最好能提前预估下HashMap中元素的个数，这样有助于提高HashMap的性能。</p>
+<p>HashMap共有四个构造方法。构造方法中提到了两个很重要的参数：初始容量和加载因子。这两个参数是影响HashMap性能的重要参数，其中容量表示哈希表中槽的数量（即哈希数组的长度），初始容量是创建哈希表时的容量（从构造函数中可以看出，如果不指明，则默认为16），加载因子是哈希表在其容量自动增加之前可以达到多满的一种尺度，当哈希表中的条目数超出了加载因子与当前容量的乘积时，则要对该哈希表进行 resize 操作（即扩容）。</p>
+<p>下面说下加载因子，如果加载因子越大，对空间的利用更充分，但是查找效率会降低（链表长度会越来越长）；如果加载因子太小，那么表中的数据将过于稀疏（很多空间还没用，就开始扩容了），对空间造成严重浪费。如果我们在构造方法中不指定，则系统默认加载因子为0.75，这是一个比较理想的值，一般情况下我们是无需修改的。</p>
+<p>另外，无论我们指定的容量为多少，构造方法都会将实际容量设为不小于指定容量的2的次方的一个数，且最大值不能超过2的30次方</p>
+<h4 id="最后总结"><a href="#最后总结" class="headerlink" title="最后总结"></a>最后总结</h4><p>hashMap是一个存储 key-value 的集合，其内部维护了一个存储数据的 Entry 数组，每个 Entry 本质上是一个单项列表，hashMap不是线程安全的，他可以被序列化，也可以被克隆，他扩容非常耗费资源，因为其扩容的时候，新建了一个数组，然后对重新计算所有元素在新的数组中的索引位置，然后再添加到扩容后新的数组中</p>
       
     </div>
+    
+    
+    
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
 
+  
+</div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/面试/" rel="tag"><i class="fa fa-tag"></i> 面试</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/21/heshCode-和equals/" rel="next" title="hashCode() 和equals()">
+                <i class="fa fa-chevron-left"></i> hashCode() 和equals()
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/21/浅谈集合/" rel="prev" title="浅谈集合">
+                浅谈集合 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -403,6 +583,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -423,8 +610,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -509,6 +705,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是-HashMap？"><span class="nav-number">1.</span> <span class="nav-text">什么是 HashMap？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#HashMap存数据的过程"><span class="nav-number">1.1.</span> <span class="nav-text">HashMap存数据的过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hashMap-的扩容"><span class="nav-number">1.2.</span> <span class="nav-text">hashMap 的扩容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最后总结"><span class="nav-number">1.3.</span> <span class="nav-text">最后总结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -666,6 +878,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
