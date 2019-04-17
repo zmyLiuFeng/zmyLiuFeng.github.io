@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://zmyliufeng.github.io/2019/04/17/hello-test/</loc>
+    <lastmod>2019-04-17T02:17:22.651Z</lastmod>
+  </url>  <url>
     <loc>https://zmyliufeng.github.io/2018/11/21/%E6%B5%85%E8%B0%88%E9%9B%86%E5%90%88/</loc>
     <lastmod>2018-11-21T13:30:44.824Z</lastmod>
   </url>  <url>
@@ -31,10 +34,10 @@
     <loc>https://zmyliufeng.github.io/2018/09/22/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87/</loc>
     <lastmod>2018-10-16T07:31:12.183Z</lastmod>
   </url>  <url>
-    <loc>https://zmyliufeng.github.io/2018/09/21/Git-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/</loc>
+    <loc>https://zmyliufeng.github.io/2018/09/25/BigDecimal%E7%B2%BE%E5%BA%A6%E8%BD%AC%E6%8D%A2/</loc>
     <lastmod>2018-10-16T07:31:12.174Z</lastmod>
   </url>  <url>
-    <loc>https://zmyliufeng.github.io/2018/09/25/BigDecimal%E7%B2%BE%E5%BA%A6%E8%BD%AC%E6%8D%A2/</loc>
+    <loc>https://zmyliufeng.github.io/2018/09/21/Git-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2018-10-16T07:31:12.174Z</lastmod>
   </url>
 </urlset>
